@@ -10,6 +10,16 @@
 #include "logic.h"
 
 void reverse(int array[], int size, int a, int b) {
+	if (a > b) {
+		int t = a;
+		a = b;
+		b = t;
+	}
+
+	if (size <= 0 || a < 0 || b < 0 || a >= size || b >= size) {
+		return;
+    }
+
 	while (a > b) {
 		int t = array[a];
 		array[b] = t;
